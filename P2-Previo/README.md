@@ -9,7 +9,7 @@
 
 1. [Descargar](it.apache.contactlab.it//db/derby/db-derby-10.14.2.0/db-derby-10.14.2.0-bin.tar.gz)
 2. Extraer en `/usr/local`
-3. (Opcional)
+3. (Opcional) Cambiar el nombre de la carpeta
 
 # Ejemplos
 
@@ -158,6 +158,7 @@ public class Principal {
 3. Añadir los contenios del citado `lib` al `buildpath` de nuestro proyecto. [Pasos](http://www.vogella.com/tutorials/Eclipse/article.html#using-jars-libraries-in-eclipse)
 
 4. Crear el paquete de Java que denominaremos`modelo` que ha de incluir las siguientes clases:
+-
 	- `Familia:` contiene métodos para obtener la identificación, descripción de una familia y un método que permita listar a todos los miembros de una familia (que son instancias de la clase "Persona"); además tendremos que establecer una relación uno-a-muchos con "Persona".
 ```java
 package jpa.eclipselink.modelo;
@@ -217,6 +218,7 @@ public class Familia {
 	}*/
 }
 ```
+-
 	- `Persona:` ha de contener métodos para obtener el nombre y los apellidos de una persona, así como también otros para ID; una lista prvada de los empleos que ha tenido cada persona y las siguientes relacione: muchos-a-uno con `familia` a través del método `getFamilia()` y uno-a-muchos con `lista de empleos` a través del método `getListaEmpleos()`.
 ```java
 package jpa.eclipselink.modelo;
@@ -290,6 +292,7 @@ public class Persona{
 	}*/
 }
 ```	
+-
 	- `Empleo:` ha de incluir como atributs privados: ID(del empleo), salario y descripción del empleo y los métodos `setter-getter` asociados.
 ```java
 package jpa.eclipselink.modelo;
@@ -363,10 +366,12 @@ Es necesario cambiar el valor del parámetro eclipselink.ddl-generation.output-m
 Cabe notar que hay que eliminar la propiedad `eclipselink.ddl-generation` después de la primera ejecución de nuestro programa y para las ejecuciones posteriores.
 
 6. Para probar la aplicación creamos una clase Test utilizando para ello el paquete de pruebas unitarias `JUnit` para Java.
+-	
 	- Importar `JUnit4`
 ```
 Properties > Java Build Path > Libraries > Add Library > JUnit > Junit 4
 ``` 
+-
 	- Crear la clase `JpaTest`
 ```java
 package jpa.eclipselink.principal;
