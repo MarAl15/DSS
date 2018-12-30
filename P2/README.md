@@ -8,6 +8,7 @@
 	- `servlet-api.jar` [descargado](http://www.java2s.com/Code/Jar/s/Downloadservletapijar.htm) 
 3. Añadir los contenios del citado `lib` al `buildpath` de nuestro proyecto. [Pasos](http://www.vogella.com/tutorials/Eclipse/article.html#using-jars-libraries-in-eclipse)
 4. Dentro del paquete `modelo` creamos las siguientes clases:
+-
 	- `Usuario`
 ```java
 package modelo;
@@ -77,7 +78,7 @@ public class Usuario{
 		this.email = email;
 	}
 	
-	/* ELIMINADO
+	/*
 	@Override
 	public String toString() {
 		return "Usuario [nombre=" + nombre + ", apellido=" + apellido + ", email=" + email + "]";
@@ -85,7 +86,10 @@ public class Usuario{
 	*/
 }
 ```
+
+-
 	- `BDUsuario`
+	
 ```java
 package modelo;
 
@@ -440,12 +444,13 @@ public static String urlString = "http://localhost:8080/P2/ListaCorreosServlet";
       <property name="javax.persistence.jdbc.user" value="prueba" />
       <property name="javax.persistence.jdbc.password" value="prueba" />
       
-      <!-- Connection Pool - QUITADO -->
+      <!-- Connection Pool 
 	  <property name="eclipselink.connection-pool.default.initial" value="1" />
 	  <property name="eclipselink.connection-pool.node2.min" value="1"/>
 	  <property name="eclipselink.connection-pool.node2.max" value="16"/>
 	  <property name="eclipselink.connection-pool.node2.url" value="jdbc:derby:/home/mar/.baseDatos/BDUsuario;create=true"/>
-
+	-->
+	
       <!-- EclipseLink debe crear este esquema de base de datos automaticamente -->
       <property name="eclipselink.ddl-generation" value="create-tables" />
       <property name="eclipselink.ddl-generation.output-mode" value="both" />
