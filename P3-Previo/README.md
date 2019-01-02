@@ -2,8 +2,7 @@
 
 ## Jersey
 
-1. [Descargar](http://repo1.maven.org/maven2/org/glassfish/jersey/bundles/jaxrs-ri/2.27/jaxrs-ri-2.27.zip)
-<!-- 2. Extraer en `/usr/local`-->
+1. [Descargar](http://repo1.maven.org/maven2/org/glassfish/jersey/bundles/jaxrs-ri/2.27/jaxrs-ri-2.27.zip) <!-- 2. Extraer en `/usr/local`-->
 2. [Descargar Jersey Client](https://jar-download.com/artifacts/com.sun.jersey/jersey-client/1.19.1/source-code)
 3. [Descagar Jersey Media](http://www.java2s.com/Code/Jar/j/Downloadjerseymediamultipart21jar.htm)
 
@@ -256,7 +255,7 @@ Se utiliza el concepto de "objeto de acceso a datos" (DAO), que nos proporciona 
 4. Clase de Java para proporcionar los servicios REST necesarios para acceder y/o modificar nuestro proveedor de contenidos a las aplicaciones y otros SW. Para hacerlo vamos a utilizar un marco de trabajo _Jersey_ para servicios Web _RESTful_, que nos proporciona apoyo para trabajar con una interfaz de aplicaciones JAX y además es considerad actualmente como la implementación de referencia del estándar jsr 311.
 	
 	Programamos la clase `TodoRecurso` dentro del paquete `recursos`:
--
+	
 	- Método `GET` para acceder al recurso desde el navegador o desde una aplicación cliente.
 	- Método `PUT` para incluir contenidos.
 	- Método `DELETE` para suprimirlos.
@@ -343,10 +342,13 @@ public class TodoRecurso {
 	}
 		
 }
-```		
-	Y en la clase `TodosRecursos`:
--	
+```	
+
+Y en la clase `TodosRecursos`:
+
+-
 	- Método `POST` para el envio de datos y de formularios Web, para las aplicaciones cliente y navegadores.
+	
 ```java
 package mio.jersey.p3.recursos;
 
@@ -439,7 +441,7 @@ public class TodosRecurso{
 ```
 	
 5. Completamos el archivo `web.xml` ubicado en la carpeta `WebContent/WEB-INF/web.xml`
-```java
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 	<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
@@ -583,7 +585,7 @@ public class Probador {
 ```
 
 Obteniendo, al ejecutar el programa en el servidor y la clase anterior como aplicación Java (Botón derecho sobre el fichero `Probador.java` > `Run As` > `Java Application`), el resultado siguiente:
-```java
+```xml
 Codigo devuelto: 201
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <todoes>
