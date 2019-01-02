@@ -508,6 +508,8 @@ public class TodosRecurso{
 </todoes>
 ```
 
+Accediendo a http://localhost:8080/mio.jersey.p3/crear_todo.html podemos crear o modificar un elemento.
+
 8. Para mostrar de una manera sencilla toda la funcionalidad que nuestro servicio de provisión de contenidos puede ofrecer, vamos a programar varias versiones del cliente que irán mostrando progresivamente el resultado de las operaciones del servidor.
 
 Para ello se crea una clase, en el fichero `Probador.java` dentro del paquete `mio.jersey.p3.cliente` (aunque también se puede crear otro proyecto Java como se realizó en el anterior ejemplo), que sirve para mostrar los contenidos del proveedor, después de introducir 2 elementos adicionales cn `PUT` y dentro de un formulario, según los formatos que hemos denominado _texto XML plano y formulario HTML_. Además se incluir el código correspondiente para comprobar que la eliminación se realiza correctamente.
