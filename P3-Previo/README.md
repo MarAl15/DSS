@@ -4,7 +4,7 @@
 
 1. [Descargar](http://repo1.maven.org/maven2/org/glassfish/jersey/bundles/jaxrs-ri/2.27/jaxrs-ri-2.27.zip) <!-- 2. Extraer en `/usr/local`-->
 2. [Descargar Jersey Client](https://jar-download.com/artifacts/com.sun.jersey/jersey-client/1.19.1/source-code)
-3. [Descagar Jersey Media](http://www.java2s.com/Code/Jar/j/Downloadjerseymediamultipart21jar.htm)
+3. [Descargar Jersey Media](http://www.java2s.com/Code/Jar/j/Downloadjerseymediamultipart21jar.htm)
 
 
 # Ejemplo tutorial
