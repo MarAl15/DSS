@@ -30,6 +30,8 @@
 	- Namespace: `http://holaMundo`
 
 Seguidamente configuramos:
+
+-
 	- Template: `Synchronous BPEL Process`
 	- Service Name: `HolaMundoService`
 	- Port Name: `HolaMundoPort`
@@ -43,6 +45,8 @@ Seguidamente configuramos:
 5. Ahora hay que proporcionar un _puerto_ y una _ligadura_ (_"binding"_) para comunicar con el servicio. Si clicamos dos veces en el archivo `HolaMundoArtifacts.wsdl` que nos muestra el navegador de proyectos, dentro de la carpeta `bpelContent`, aparecerá el _editor de WSDL_.
 
 Seleccionamos `Show Properties` en el menú que nos aparece con el botón derecho sobre `HolaMundoService`. Clicando en `HolaMundoPort` aparece un menú desplegable que se abre:
+
+-
 	- Name: `HolaMundoPort`
 	- Binding: `HolaMundoBinding`
 	- Address: `http://localhost:8080/ode/processes/HolaMundo`
@@ -56,15 +60,8 @@ Clicaremos en el campo debajo de la columna _Associated Port_ de la tabla anteri
 
 7. Para la ejecución del servicio, nos vamos a la vsta `Servers` de nuestro IDE y arrancamos el servidor ODE y con el botón derecho seleccionamos `Add and Remove`, apareciéndonos un menú partido con `ODE_Prueba` en la columna izquierda (_Available_) que añadiremos a la columna derecha (_Configured_). Si apareciese una ventana de notificación o si el menú partido tuviera su columna izquierda vacía, hay que cerrar el runtime de Eclipse y volver a configurar el servidor _Ode v1.x_, a través del enlace _launch and configuration_ de su menú de configuración. Por último, seleccionamos _Add y Finish_.
 
-Si escribimos la dirección http://localhost:8080/ode/ en el navegador (ver figura ??) y seleccionamos el enlace `Deployment Browser` > `Process Services` (http://localhost:8080/ode/deployment/services/), aparecerá la lista de los servicios instalados en el puerto 8080 de nuestra máquina local.
+Si escribimos la dirección http://localhost:8080/ode/ en el navegador y seleccionamos el enlace `Deployment Browser` > `Process Services` (http://localhost:8080/ode/deployment/services/), aparecerá la lista de los servicios instalados en el puerto 8080 de nuestra máquina local.
 
 8. Por último, seleccionamos con el botón derecho el archivo `HolaMundoArtifacts.wsdl` > `Web Services` > `Test with Web Services Explorer` y entonces aparecerá el explorador de servicios Web de Eclipse. En la parte izquierda del navegador, hay que expandir el árbol debajo de `file://.../ODE_Prueba/bpelContent/HolaMundoArtifacts.wsdl` hasta que se muestra `process`.
 
-Ahora hay que clicar en el enlace `process` de la tabla `Operations` para que nos aparezca un cuadro de texto de sustitución para los parámetros de la operación cuyo comportamiento queramos probar y poder llamarla o especificar puntos finales (_endpoints_) adicionales. Aparecerá la captura de pantalla donde escribimos el mensaje "¡Hola ODE!" en la ventana de texto y pulsamos el botón _Go_, entonces nos
-ha de aparecer el resultado de la ejecución de este servicio simple en la ventana inferior.
-
-
-
-
-
-
+Ahora hay que clicar en el enlace `process` de la tabla `Operations` para que nos aparezca un cuadro de texto de sustitución para los parámetros de la operación cuyo comportamiento queramos probar y poder llamarla o especificar puntos finales (_endpoints_) adicionales. Aparecerá la captura de pantalla donde escribimos el mensaje "¡Hola ODE!" en la ventana de texto y pulsamos el botón _Go_, entonces nos ha de aparecer el resultado de la ejecución de este servicio simple en la ventana inferior.
